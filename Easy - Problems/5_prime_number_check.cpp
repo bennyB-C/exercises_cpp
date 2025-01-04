@@ -13,7 +13,7 @@ int main()
     {
         if(n%i == 0){
             cout << "Not prime because it can be divided by: " << i << endl;
-            return (double)-1.45;
+            return (int)-1.45;
         }
     }
     cout << "Prime" << endl;
