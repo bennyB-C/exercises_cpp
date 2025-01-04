@@ -1,0 +1,35 @@
+Easy Problems
+
+1. FizzBuzz: Print numbers from 1 to 100. For multiples of 3, print "Fizz" instead of the number. For multiples of 5, print "Buzz". For multiples of both 3 and 5, print "FizzBuzz".
+2. Palindrome Check: Write a program to check if a given string is a palindrome (reads the same forward and backward).
+3. Factorial Calculation: Compute the factorial of a number using both iterative and recursive approaches.
+4. Sum of Digits: Given an integer, calculate the sum of its digits.
+5. Prime Number Check: Write a program to determine if a number is prime.
+
+Intermediate Problems
+6. Two Sum: Given an array of integers, find two numbers such that they add up to a specific target.
+7. Merge Sorted Arrays: Merge two sorted arrays into one sorted array without using extra space.
+8. Longest Substring Without Repeating Characters: Find the length of the longest substring of a given string that does not contain any repeating characters.
+9. Binary Search: Implement a binary search algorithm to find the position of a target element in a sorted array.
+10. Find the Missing Number: Given an array of n numbers from 1 to n+1 with one missing, find the missing number.
+
+Advanced Problems
+11. Kadane's Algorithm: Find the maximum sum of a contiguous subarray in an array of integers.
+12. N-Queens Problem: Solve the N-Queens problem using backtracking to place N queens on an N×N chessboard.
+13. Dijkstra's Algorithm: Implement Dijkstra's algorithm to find the shortest path between two nodes in a weighted graph.
+14. Knapsack Problem: Solve the 0/1 Knapsack problem using dynamic programming.
+15. Matrix Rotation: Rotate a given NxN matrix by 90 degrees clockwise.
+
+Expert Problems
+16. Suffix Array Construction: Construct a suffix array for a given string and use it to perform substring searches efficiently.
+17. Trie Implementation: Implement a Trie data structure and use it to perform autocomplete suggestions for a given prefix.
+18. Flood Fill Algorithm: Implement the flood fill algorithm to fill a connected region in a 2D matrix.
+19. Graph Coloring: Solve the graph coloring problem using backtracking.
+20. Minimum Spanning Tree: Implement Kruskal's or Prim's algorithm to find the minimum spanning tree of a weighted graph.
+
+Bonus Challenges
+21. Topological Sorting: Perform a topological sort on a directed acyclic graph (DAG).
+22. String Matching (KMP Algorithm): Implement the Knuth-Morris-Pratt algorithm to efficiently search for a pattern in a string.
+23. Fast Exponentiation: Implement a fast exponentiation algorithm using divide and conquer.
+24. Maximum Flow (Ford-Fulkerson): Solve the maximum flow problem in a flow network using the Ford-Fulkerson algorithm.
+25. Segment Tree: Build and query a segment tree for range sum or range minimum queries.
