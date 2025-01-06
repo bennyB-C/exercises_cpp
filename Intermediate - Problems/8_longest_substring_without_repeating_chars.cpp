@@ -21,7 +21,7 @@ bool verify_new_string(string new_s, char c){
     return false;
 }
 
-string find_longest(string s){
+string find_longest_substr(string s){
     int n = s.size();
     string new_s;
     list<string> list_possible; // possible answers
@@ -48,6 +48,6 @@ int main(){
 
     string a = "hello";
         // "hello" --> "hel"
-    cout << find_longest(a);
+    cout << find_longest_substr(a);
     return 0;
 }
