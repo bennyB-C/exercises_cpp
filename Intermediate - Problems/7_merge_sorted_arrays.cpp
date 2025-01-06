@@ -1,71 +1,64 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-int main()
-{
-    // int arr_1[50]{1,2,4,5};
-    // int arr_2[50]{3,6,7,10};
-    int arr_1[50]{3,6,7,10};
-    int arr_2[50]{1,2,4,5};
-    int n_1 = 4;
-    int n_2 = 4;
+class Solution{
 
-    int i = 0;
-    int j = 0;
-    bool primer = false;
 
-    if(arr_1[i] < arr_2[j]){
-        primer = true;
-        ++i;
-    }
-
-    while(i<n_1 && j<n_2)
-    {
-        if(primer)
-        {
-            if(arr_1[i] > arr_2[j]){
-                int k = arr_2[j];
-                arr_2[j] = arr_1[i];
-                arr_1[i] = k;
+    public:
+        void merge_two_sorted(vector<int>&nums1, vector<int>& nums2, int m, int n){
+            if(m == 0 && n>0){
+                nums1 = nums2;
+                return;
             }
-            ++i;
-        }
-        else{
-            if(arr_2[j] > arr_1[i]){
-                int k = arr_1[j];
-                arr_2[j] = arr_1[i];
-                arr_1[i] = k;
-            }
-            ++j;
-        }
-    }
+            if(m > 0 && n <=0)
+                return;
 
-    if(j<n_2){
-        for (; j < n_2; ++j){
-            arr_1[i] = arr_2[j];
-            ++i;
+            int i, j, k;
+
+            // three pointers technique:
+            i = m - 1;
+            j = n - 1;
+            k = m + n - 1;
+
+            while(true){
+                if(nums1[i] > nums2[j]){
+                    nums1[k--] = nums1[i--];
+                }
+                else
+                    nums1[k--] = nums2[j--];
+                if(i<0 || j<0)
+                    break;
+            }
+
+            while(i>=0 && k>=0)
+                nums1[k--] = nums1[i--];
+            while(j>=0 && k>=0)
+                nums1[k--] = nums2[j--];
         }
-    }
-    if(i<n_1){
-        for (; i < n_1; ++i){
-            arr_2[j] = arr_1[i];
-            ++j;
+
+        void show_result(vector<int> &answ){
+            for (int i = 0; i < answ.size();++i){
+                if(i == 0)
+                    cout << '[';
+                cout << answ.at(i);
+                if(i== answ.size()-1){
+                    cout << ']';
+                }
+                else
+                    cout << ", ";
+            }
         }
-    }
-    
-    if(primer){
-        for(int a : arr_1){
-            if(a!=0)
-                cout << a << endl;
-        }
-    }
-    else{
-        for(int a : arr_2){
-            if(a!=0)
-                cout << a << endl;
-        }
-    }
+
+};
+
+int main(){
+    vector<int> nums1{2,4,7,0,0,0,0};
+    vector<int> nums2{-1,2,3,8};
+    Solution sol;
+    sol.merge_two_sorted(nums1,nums2,3,4);
+    sol.show_result(nums1);
 
     return 0;
 }
